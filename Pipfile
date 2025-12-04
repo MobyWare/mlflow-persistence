@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+mlflow = "*"
+disutils = "*"
+str2bool = "*"
+
+[dev-packages]
+boto3 = "*"
+ipykernel = "*"
+mlflow = "==3.2.0"
+
+[requires]
+python_version = "3.12"

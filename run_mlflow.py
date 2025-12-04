@@ -29,9 +29,7 @@ def main(port:int, skip_exp:bool):
     with mlflow.start_run(experiment_id=experiment_id) if len(experiment_id) > 0 else mlflow.start_run():
         mlflow.log_param("configured_by", "docker_image_default")
         # Any artifact logged here will go to the default location
-        with open("test.txt", "w") as f:
-            f.write("This artifact is stored by the default config.")
-        mlflow.log_artifact("test.txt")
+        mlflow.log_artifact("artifacts/test.txt")
 
     # Let's inspect the experiment to see where its artifacts will be stored
     exp_details = mlflow.get_experiment(experiment_id)
